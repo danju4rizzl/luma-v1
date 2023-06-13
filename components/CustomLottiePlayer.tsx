@@ -8,8 +8,8 @@ import { Player } from "@lottiefiles/react-lottie-player"
  */
 export default function CustomLottiePlayer({ src }: CustomLottiePlayerProps) {
 	return (
-		<div>
+		<>
 			<Player src={src} loop autoplay />
-		</div>
+		</>
 	)
 }

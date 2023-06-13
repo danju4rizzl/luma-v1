@@ -1,11 +1,10 @@
-import Collab from "@/components/Collab"
-import Hero from "@/components/Hero"
+import { Hero, CollabSection } from "@/components"
 
 export default function Home() {
 	return (
 		<main className="overflow-hidden">
 			<Hero />
-			<Collab />
+			<CollabSection />
 		</main>
 	)
 }

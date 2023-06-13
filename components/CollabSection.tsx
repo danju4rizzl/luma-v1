@@ -30,7 +30,7 @@ const collabList = [
 	}
 ]
 
-export default function Collab() {
+export default function CollabSection() {
 	return (
 		<section className="collab my-14">
 			<div className="grid place-items-center gap-11">

@@ -8,7 +8,7 @@ TODO: Add responsiveness
 */
 function Hero() {
 	return (
-		<div className="hero py-44 px-32 flex gap-32">
+		<div className={`hero py-44 px-32 flex gap-32 flex-col sm:flex-row `}>
 			<div className="max-w-md grid gap-8">
 				<h1 className="text-6xl font-semibold ">
 					We’re here to Increase your Productivity
@@ -27,7 +27,6 @@ function Hero() {
 					/>
 				</div>
 			</div>
-
 			<div className="">
 				<CustomLottiePlayer src={heroImage} />
 			</div>
