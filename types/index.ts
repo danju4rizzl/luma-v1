@@ -11,3 +11,13 @@ export interface CustomButtonProps {
 export interface CustomLottiePlayerProps {
   src: object
 }
+
+export interface SectionTitleProps {
+  title: string
+}
+
+export interface RatingProps {
+  ratedBy: string, rating: number
+}
+
+

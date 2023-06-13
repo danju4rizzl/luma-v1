@@ -32,7 +32,7 @@ const collabList = [
 
 export default function CollabSection() {
 	return (
-		<section className="collab my-14">
+		<section className="collab my-24">
 			<div className="grid place-items-center gap-11">
 				<h3 className="text-4xl font-bold">
 					More than 25,000 teams use Collab
@@ -40,7 +40,7 @@ export default function CollabSection() {
 
 				<div className="flex gap-10">
 					{collabList.map(({ collabAlt, collabSrc }) => (
-						<Image src={collabSrc} width={180} height={50} alt={collabAlt} />
+						<Image src={collabSrc} width={180} height={100} alt={collabAlt} />
 					))}
 				</div>
 			</div>

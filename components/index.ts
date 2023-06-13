@@ -3,7 +3,8 @@ import Hero from "./Hero"
 import CustomButton from "./CustomButton"
 import CustomLottiePlayer from "./CustomLottiePlayer"
 import CollabSection from "./CollabSection"
+import SupportSection from "./SupportSection"
 
 
 
-export { Navbar, CustomButton, CustomLottiePlayer, CollabSection, Hero }
+export { Navbar, Hero, CustomButton, CustomLottiePlayer, CollabSection, SupportSection }
