@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { CustomButton, CustomLottiePlayer } from "@/components"
-import heroImage from "@/public/hero-lottie.json"
+import heroLottie from "@/public/lottie-1.json"
 import { MdOutlinePlayCircleOutline } from "react-icons/md"
 
 /**
@@ -28,7 +28,7 @@ function Hero() {
 				</div>
 			</div>
 			<div className="max-w-3xl">
-				<CustomLottiePlayer src={heroImage} />
+				<CustomLottiePlayer src={heroLottie} />
 			</div>
 		</div>
 	)

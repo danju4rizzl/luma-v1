@@ -1,32 +1,26 @@
 import Image from "next/image"
 
-import image1 from "@/public/collab-1.svg"
-import image2 from "@/public/collab-2.svg"
-import image3 from "@/public/collab-3.svg"
-import image4 from "@/public/collab-4.svg"
-import image5 from "@/public/collab-5.svg"
-
 const collabList = [
 	{
 		collabAlt: "Collab 1",
-		collabSrc: image1
+		collabSrc: "/collab-1.svg"
 	},
 
 	{
 		collabAlt: "Collab 2",
-		collabSrc: image2
+		collabSrc: "/collab-2.svg"
 	},
 	{
 		collabAlt: "Collab 3",
-		collabSrc: image3
+		collabSrc: "/collab-3.svg"
 	},
 	{
 		collabAlt: "Collab 4",
-		collabSrc: image4
+		collabSrc: "/collab-4.svg"
 	},
 	{
 		collabAlt: "Collab 5",
-		collabSrc: image5
+		collabSrc: "/collab-5.svg"
 	}
 ]
 

@@ -1,10 +1,8 @@
-import SectionTitle from "./SectionTitle"
-import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs"
+import { SectionTitle, Rating } from "@/components"
 
 import { TbActivityHeartbeat } from "react-icons/tb"
 import { AiOutlinePieChart } from "react-icons/ai"
 import { FiCommand } from "react-icons/fi"
-import Rating from "./Rating"
 
 const supportRatings = [
 	{ ratedBy: "Tolani", rating: 4.9 },
@@ -33,7 +31,7 @@ const supportPoints = [
 
 export default function SupportSection() {
 	return (
-		<section className="support flex  my-24 py-28 px-32 gap-x-20 bg-slate-50">
+		<section className="support flex mt-24 py-28 px-32 gap-x-20 bg-slate-50">
 			<div className="w-1/2">
 				<SectionTitle title="How we support our partners all over the world" />
 				<p className="text-sm text-gray-400">

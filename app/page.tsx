@@ -1,4 +1,10 @@
-import { Hero, CollabSection, SupportSection } from "@/components"
+import {
+	Hero,
+	CollabSection,
+	SupportSection,
+	FeaturesSection,
+	BenefitsSection
+} from "@/components"
 
 export default function Home() {
 	return (
@@ -8,6 +14,10 @@ export default function Home() {
 				<CollabSection />
 			</div>
 			<SupportSection />
+			<div className="bg-gradient-to-br from-teal-50 via-teal-100  to-white">
+				<FeaturesSection />
+				<BenefitsSection />
+			</div>
 		</main>
 	)
 }

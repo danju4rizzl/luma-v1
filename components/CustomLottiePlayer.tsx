@@ -9,7 +9,12 @@ import { Player } from "@lottiefiles/react-lottie-player"
 export default function CustomLottiePlayer({ src }: CustomLottiePlayerProps) {
 	return (
 		<>
-			<Player src={src} loop autoplay />
+			<Player
+				src={src}
+				loop
+				autoplay
+				style={{ width: "100%", height: "100%" }}
+			/>
 		</>
 	)
 }
