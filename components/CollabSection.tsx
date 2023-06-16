@@ -33,8 +33,14 @@ export default function CollabSection() {
 				</h3>
 
 				<div className="flex gap-10">
-					{collabList.map(({ collabAlt, collabSrc }) => (
-						<Image src={collabSrc} width={180} height={100} alt={collabAlt} />
+					{collabList.map(({ collabAlt, collabSrc }, index) => (
+						<Image
+							src={collabSrc}
+							width={180}
+							height={100}
+							alt={collabAlt}
+							key={collabAlt}
+						/>
 					))}
 				</div>
 			</div>

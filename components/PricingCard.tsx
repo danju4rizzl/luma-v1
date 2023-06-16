@@ -1,5 +1,5 @@
 import { PricingCardProps } from "@/types"
-import { CustomText, CustomListItem } from "@/components"
+import { CustomText, CustomListItem, Button } from "@/components"
 
 export default function PricingCard({
 	price,
@@ -35,16 +35,7 @@ export default function PricingCard({
 				))}
 
 				<div className="grid">
-					<button
-						type="button"
-						className={`px-8 py-3 rounded-2xl shadow-sm ${
-							isHot
-								? "bg-teal-400 text-white hover:bg-teal-600 "
-								: "bg-white text-teal-400 hover:text-white hover:bg-teal-600"
-						}`}
-					>
-						Start <span className="uppercase">{title}</span> plan
-					</button>
+					<Button title={`Start ${title} plan`} active={isHot} />
 				</div>
 			</ul>
 		</div>

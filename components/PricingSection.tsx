@@ -1,4 +1,4 @@
-import { SectionTitle, CustomText, Pricing } from "@/components"
+import { SectionTitle, CustomText, Pricing, Button } from "@/components"
 
 export default function PricingSection() {
 	return (

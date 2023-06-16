@@ -2,6 +2,11 @@
 
 import React, { ReactNode } from "react";
 
+export interface ButtonProps {
+  title: string;
+  active?: boolean;
+}
+
 export interface CustomButtonProps {
   title: string;
   outline?: boolean;

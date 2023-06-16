@@ -1,7 +1,9 @@
 import Navbar from './Navbar'
+import Footer from './Footer'
 import HeroSection from "./HeroSection"
 // Ui imports
 import CustomButton from "./ui/CustomButton"
+import Button from "./ui/Button"
 import CustomText from "./ui/CustomText"
 import SectionTitle from "./ui/SectionTitle"
 
@@ -11,6 +13,7 @@ import Rating from "./Rating"
 import CustomListItem from "./CustomListItem"
 import Pricing from "./Pricing"
 import PricingCard from "./PricingCard"
+import ContactForm from "./ContactForm"
 
 // See section imports here  
 import CollabSection from "./CollabSection"
@@ -24,8 +27,10 @@ import TestimonialSection from "./TestimonialSection"
 
 export {
   Navbar,
+  Footer,
   HeroSection,
   CustomButton,
+  Button,
   CustomText,
   SectionTitle,
   CustomLottiePlayer,
@@ -33,6 +38,7 @@ export {
   CustomListItem,
   Pricing,
   PricingCard,
+  ContactForm,
   CollabSection,
   SupportSection,
   FeaturesSection,

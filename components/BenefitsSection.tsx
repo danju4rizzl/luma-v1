@@ -1,5 +1,5 @@
 import { SectionTitle, CustomLottiePlayer, CustomListItem } from "@/components"
-import benefitsLottie from "@/public/lottie-3.json"
+import benefitsLottie from "@/public/lottie-2.json"
 
 const benefitsList = [
 	{ title: "Free Consulting With Expert Saving Money" },

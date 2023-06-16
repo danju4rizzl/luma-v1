@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import { TogglerType, TogglerProps } from "@/types"
+import { TogglerProps, TogglerType } from "@/types"
 import { PricingCard } from "@/components"
 
 const priceCardData = [
@@ -66,9 +66,9 @@ export default function Pricing() {
 
 	const [activeSwitch, setActiveSwitch] = useState<TogglerType>(monthly)
 
-	const handleSwitch = (button: TogglerType) => {
-		if (activeSwitch !== button) {
-			setActiveSwitch(button)
+	const handleSwitch = (monthOrYear: TogglerType) => {
+		if (activeSwitch !== monthOrYear) {
+			setActiveSwitch(monthOrYear)
 		}
 	}
 
@@ -91,12 +91,13 @@ export default function Pricing() {
 
 			<div className="flex justify-center gap-8 px-24">
 				{priceCardData.map(
-					({ cardTitle, monthlyPrice, yearlyPrice, cardOffers }) => (
+					({ cardTitle, monthlyPrice, yearlyPrice, cardOffers }, index) => (
 						<PricingCard
 							offers={cardOffers}
 							title={cardTitle}
 							price={activeSwitch === monthly ? monthlyPrice : yearlyPrice}
 							isHot={cardTitle === "pro"}
+							key={index}
 						/>
 					)
 				)}
