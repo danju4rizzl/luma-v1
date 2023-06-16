@@ -1,9 +1,9 @@
 import Navbar from './Navbar'
-import Hero from "./Hero"
-// Ui import 
-import CustomButton from "./CustomButton"
-import CustomText from "./CustomText"
-import SectionTitle from "./SectionTitle"
+import HeroSection from "./HeroSection"
+// Ui imports
+import CustomButton from "./ui/CustomButton"
+import CustomText from "./ui/CustomText"
+import SectionTitle from "./ui/SectionTitle"
 
 // Other Components
 import CustomLottiePlayer from "./CustomLottiePlayer"
@@ -24,7 +24,7 @@ import TestimonialSection from "./TestimonialSection"
 
 export {
   Navbar,
-  Hero,
+  HeroSection,
   CustomButton,
   CustomText,
   SectionTitle,

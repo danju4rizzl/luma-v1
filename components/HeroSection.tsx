@@ -6,7 +6,7 @@ import { MdOutlinePlayCircleOutline } from "react-icons/md"
 /**
 TODO: Add responsiveness 
 */
-function Hero() {
+function HeroSection() {
 	return (
 		<div className="hero pt-44 pb-16 px-14  md:px-32 flex justify-between gap-32 flex-col sm:flex-row ">
 			<div className="grid gap-3 max-w-2xl  md:max-w-lg ">
@@ -34,4 +34,4 @@ function Hero() {
 	)
 }
 
-export default Hero
+export default HeroSection
