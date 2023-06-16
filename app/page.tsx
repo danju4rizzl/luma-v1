@@ -3,21 +3,25 @@ import {
 	CollabSection,
 	SupportSection,
 	FeaturesSection,
-	BenefitsSection
+	BenefitsSection,
+	PricingSection,
+	TestimonialSection
 } from "@/components"
 
 export default function Home() {
 	return (
 		<main className="overflow-hidden">
-			<div className="bg-gradient-to-b from-teal-300 via-teal-200  to-white">
+			<div className="bg-gradient-to-b from-teal-200 via-teal-100  to-white">
 				<Hero />
 				<CollabSection />
 			</div>
 			<SupportSection />
+			<FeaturesSection />
+			<BenefitsSection />
 			<div className="bg-gradient-to-br from-teal-50 via-teal-100  to-white">
-				<FeaturesSection />
-				<BenefitsSection />
+				<PricingSection />
 			</div>
+			<TestimonialSection />
 		</main>
 	)
 }

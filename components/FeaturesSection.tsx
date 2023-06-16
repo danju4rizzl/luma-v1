@@ -51,7 +51,7 @@ export default function FeaturesSection() {
 					<CustomButton title="Get Started" />
 				</div>
 			</div>
-			<div className="flex gap-8">
+			<div className="flex flex-wrap justify-center  gap-8">
 				{cardList.map((card, index) => (
 					<FeaturesCard key={index} {...card} />
 				))}
