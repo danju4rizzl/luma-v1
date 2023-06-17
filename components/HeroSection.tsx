@@ -14,12 +14,11 @@ function HeroSection() {
 					We’re here to Increase your Productivity
 				</h1>
 				<div className="pr-24 space-y-8">
-					<Image src="/mark.svg" alt="just a mark" width={400} height={100} />
+					<Image src="/mark.svg" alt="just a mark" width={400} height={100} className="w-auto"/>
 					<CustomText
 						text="Let's make your work more organize and easily using the app 
 						Dashboard with many of the latest features you need to succeed managing work daily."
 					/>
-				</div>
 				<div className="flex items-center gap-5">
 					<CustomButton title="Try free trial" />
 					<CustomButton
@@ -27,6 +26,7 @@ function HeroSection() {
 						outline
 						icon={<MdOutlinePlayCircleOutline fontSize={"1.3rem"} />}
 					/>
+				</div>
 				</div>
 			</div>
 			<CustomLottiePlayer src={heroLottie} />

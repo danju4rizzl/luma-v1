@@ -40,6 +40,7 @@ export default function CollabSection() {
 							height={100}
 							alt={collabAlt}
 							key={collabAlt}
+							className="w-auto"
 						/>
 					))}
 				</div>

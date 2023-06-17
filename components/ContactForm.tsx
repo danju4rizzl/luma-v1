@@ -14,6 +14,7 @@ export default function ContactForm() {
 
 			<label htmlFor="message">Message</label>
 			<textarea
+			
 				name="message"
 				id="message"
 				placeholder="What would you like to say"
