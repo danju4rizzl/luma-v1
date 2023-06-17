@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
 	return (
-		<main className="">
+		<main className="overflow-hidden">
 			<div className="bg-gradient-to-b from-teal-200 via-teal-100  to-white">
 				<HeroSection />
 				<CollabSection />

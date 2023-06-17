@@ -5,7 +5,6 @@ import {
 	SectionTitle,
 	CustomText,
 	CustomLottiePlayer,
-	Button,
 	ContactForm
 } from "@/components"
 import quoteImg from "@/public/quote.svg"
@@ -22,7 +21,7 @@ const TestimonialsData = [
 
 export default function TestimonialSection() {
 	return (
-		<section className="px-32 pt-32 pb-16 grid grid-cols-2 gap-8 bg-slate-800 ">
+		<section className="px-32 pt-32 pb-20 grid grid-cols-2 gap-8 bg-slate-800 ">
 			<div className="text-white pr-16">
 				<SectionTitle title="What people are saying about us" />
 
