@@ -13,15 +13,15 @@ export default function Home() {
 		<main className="overflow-hidden">
 			<div className="bg-gradient-to-b from-teal-200 via-teal-100  to-white">
 				<HeroSection />
-				{/* <CollabSection /> */}
+				<CollabSection />
 			</div>
-			{/* <SupportSection />
+			<SupportSection />
 			<FeaturesSection />
 			<BenefitsSection />
 			<div className="bg-gradient-to-br from-teal-50 via-teal-100  to-white">
 				<PricingSection />
 			</div>
-			<TestimonialSection /> */}
+			<TestimonialSection />
 		</main>
 	)
 }
