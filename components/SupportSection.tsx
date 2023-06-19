@@ -5,7 +5,7 @@ import { AiOutlinePieChart } from "react-icons/ai"
 import { FiCommand } from "react-icons/fi"
 
 const supportRatings = [
-	{ ratedBy: "Tolani", rating: 4.9 },
+	{ ratedBy: "Tolani", rating: 3.9 },
 	{ ratedBy: "Chinedu", rating: 4.8 },
 	{ ratedBy: "Mike", rating: 5 }
 ]
@@ -15,42 +15,41 @@ const supportPoints = [
 		title: "Publishing",
 		icon: <TbActivityHeartbeat />,
 		description:
-			"Plan, collaborate, and publishing your contetn that drivees meaningful engagement and growth for your barnd"
+			"Plan, collaborate, and publishing your content that drives meaningful engagement and growth for your brand"
 	},
 	{
 		title: "Analytics",
 		icon: <AiOutlinePieChart />,
-		description: "Analyze your performance and create goegeous report"
+		description: "Analyze your performance and create gorgeous report"
 	},
 	{
 		title: "Integration",
 		icon: <FiCommand />,
-		description: "Quiuckly navigate you anda engage with your adience"
+		description: "Quickly navigate you and engage with your audience"
 	}
 ]
 
 export default function SupportSection() {
 	return (
-		<section className="support flex mt-24 py-28 px-32 gap-x-20 bg-slate-50">
-			<div className="w-1/2">
+		<section className="flex flex-col md:flex-row gap-y-10  justify-between mt-24 py-28 px-6 sm:px-14 md:px-20 lg:px-32  bg-slate-50">
+			<div className="w-full md:w-1/2 ">
 				<SectionTitle title="How we support our partners all over the world" />
-				<p className="text-sm text-gray-400">
+				<small className="text-sm text-slate-500">
 					SaaS become a common delivery model for many business application,
 					including office software, messaging software, payroll processing
 					software, DBMS software, management software
-				</p>
-
-				<div className="flex gap-16 my-8">
+				</small>
+				<div className="flex flex-wrap justify-start lg:justify-between  gap-x-10 gap-y-5 my-8 ">
 					{supportRatings.map(({ ratedBy, rating }, index) => (
 						<Rating ratedBy={ratedBy} rating={rating} key={index} />
 					))}
 				</div>
 			</div>
-			<div className="w-1/3">
-				<ul>
+			<div className="w-full md:w-1/3 ">
+				<ul className="grid gap-8 md:gap-5">
 					{supportPoints.map(({ title, icon, description }, index) => (
 						<li
-							className="grid grid-flow-col gap-5 justify-start items-start mb-5 "
+							className="grid grid-flow-col gap-5 justify-start items-start"
 							key={index}
 						>
 							<div className="bg-white text-teal-400 text-3xl p-4 rounded-lg shadow-lg">
