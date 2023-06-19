@@ -1,15 +1,23 @@
 import Link from "next/link"
 import { Navigation } from "@/components"
+import { MdMenu, MdMenuOpen } from "react-icons/md"
+
 export default function Header() {
 	return (
-		<header className="fixed w-full z-50  hidden  md:block  md:px-20 lg:px-32">
-			<div className="flex justify-between items-center bg-white rounded-full my-8 p-5 shadow-lg">
-				<Link className="text-4xl font-semibold text-teal-500 mx-5" href={"/"}>
-					Luma
-				</Link>
-
-				<Navigation />
-				<div className="flex items-center gap-5">
+		<header className="fixed w-full px-5  md:px-20 lg:px-32 z-50">
+			<div className=" bg-white rounded-full my-8 px-5 py-6 shadow-lg flex items-center justify-between">
+				<div className="flex">
+					<Link
+						className="text-4xl font-semibold text-teal-500 mx-5"
+						href={"/"}
+					>
+						Luma
+					</Link>
+					<div className="hidden lg:flex">
+						<Navigation />
+					</div>
+				</div>
+				<div className="hidden lg:flex justify-between items-center gap-5">
 					<Link href={"/"}>Login</Link>
 					<Link
 						href={"/"}
@@ -17,6 +25,14 @@ export default function Header() {
 					>
 						Sign Up
 					</Link>
+				</div>
+
+				{/* Mobile Navigation is here */}
+				<div className="lg:hidden">
+					<div className="p-3 text-teal-800 text-4xl bg-teal-50 rounded-full">
+						<MdMenu />
+						{/* <MdMenuOpen /> */}
+					</div>
 				</div>
 			</div>
 		</header>

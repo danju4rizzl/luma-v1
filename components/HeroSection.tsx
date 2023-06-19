@@ -8,17 +8,20 @@ TODO: Add responsiveness
 */
 function HeroSection() {
 	return (
-		<section className="hero pt-44 pb-16 px-14  md:px-32 flex justify-between gap-32 flex-col sm:flex-row ">
-			<div className="grid gap-3 max-w-2xl  md:max-w-lg ">
-				<h1 className="text-4xl md:text-6xl  font-semibold ">
+		<section className="hero pt-44 pb-16 px-14  md:px-20 lg:px-32 flex justify-between flex-col md:flex-row ">
+			<div className="w-full md:w-lg text-center md:text-left grid justify-center">
+			{/*Heading*/}
+				<h1 className="text-6xl my-3 font-semibold ">
 					We’re here to Increase your Productivity
 				</h1>
-				<div className="pr-24 space-y-8">
-					<Image src="/mark.svg" alt="just a mark" width={400} height={100} className="w-auto"/>
+			{/*mark + text + button*/}
+				<div className="">
+					<Image src="/mark.svg" alt="just a mark" width={400} height={100} className="w-full" />
 					<CustomText
 						text="Let's make your work more organize and easily using the app 
 						Dashboard with many of the latest features you need to succeed managing work daily."
 					/>
+			{/*Buttons */}
 				<div className="flex items-center gap-5">
 					<CustomButton title="Try free trial" />
 					<CustomButton
@@ -29,7 +32,7 @@ function HeroSection() {
 				</div>
 				</div>
 			</div>
-			<CustomLottiePlayer src={heroLottie} />
+			<div className="hidden lg:flex"><CustomLottiePlayer src={heroLottie} /></div>
 		</section>
 	)
 }
