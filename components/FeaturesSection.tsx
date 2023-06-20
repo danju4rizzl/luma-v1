@@ -48,7 +48,7 @@ export default function FeaturesSection() {
 				<div className="lg:w-1/2 lg:mx-4 mb-5 lg:mb-0">
 					<CustomText text="We offer a variety of interesting features that you can help increase yor productivity at work and manage your projects easily" />
 				</div>
-				<div className="lg:w-1/3 ">
+				<div className="lg:w-1/3 grid justify-center items-baseline">
 					<CustomButton title="Get Started" />
 				</div>
 			</div>
