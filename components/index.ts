@@ -15,6 +15,8 @@ import Pricing from "./Pricing"
 import PricingCard from "./PricingCard"
 import ContactForm from "./ContactForm"
 import Navigation from "./Navigation"
+import SectionContainer from "./SectionContainer"
+
 
 // See section imports here  
 import CollabSection from "./CollabSection"
@@ -25,6 +27,7 @@ import PricingSection from "./PricingSection"
 import TestimonialSection from "./TestimonialSection"
 
 export {
+  SectionContainer,
   Navigation,
   Header,
   Footer,

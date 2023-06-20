@@ -6,8 +6,8 @@ import { FiCommand } from "react-icons/fi"
 
 const supportRatings = [
 	{ ratedBy: "Tolani", rating: 3.9 },
-	{ ratedBy: "Chinedu", rating: 4.8 },
-	{ ratedBy: "Mike", rating: 5 }
+	{ ratedBy: "Amaka", rating: 5 },
+	{ ratedBy: "Mike", rating: 4.8 }
 ]
 
 const supportPoints = [

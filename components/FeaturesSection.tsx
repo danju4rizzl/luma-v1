@@ -1,4 +1,4 @@
-import { CustomText, SectionTitle, CustomButton } from "@/components"
+import { SectionContainer, CustomText, SectionTitle, CustomButton,} from "@/components"
 import { FeaturesCardProps } from "@/types"
 import Image from "next/image"
 
@@ -29,9 +29,10 @@ const FeaturesCard = ({ image, title, body }: FeaturesCardProps) => {
 					width={364}
 					height={430}
 					alt={`Card image of ${title}`}
+					
 				/>
 			</div>
-			<div className="max-w-sm pr-2">
+			<div className="max-w-sm pr-2 text-center md:text-left">
 				<h4 className="text-2xl font-bold mt-4 mb-2">{title}</h4>
 				<CustomText text={body} />
 			</div>
@@ -41,21 +42,21 @@ const FeaturesCard = ({ image, title, body }: FeaturesCardProps) => {
 
 export default function FeaturesSection() {
 	return (
-		<section className="features px-32 py-14 ">
-			<div className="flex justify-evenly my-24">
+		<SectionContainer className="py-5 md:py-14">
+			<div className="grid lg:flex justify-center lg:justify-between my-24 text-center">
 				<SectionTitle title="Features you can use" />
-				<div className="w-1/2 mx-4">
+				<div className="lg:w-1/2 lg:mx-4 mb-5 lg:mb-0">
 					<CustomText text="We offer a variety of interesting features that you can help increase yor productivity at work and manage your projects easily" />
 				</div>
-				<div className="w-1/3 grid grid-flow-col justify-end items-baseline">
+				<div className="lg:w-1/3 ">
 					<CustomButton title="Get Started" />
 				</div>
 			</div>
-			<div className="flex flex-wrap  md:flex-nowrap justify-center  gap-8">
+			<div className="flex flex-wrap md:flex-nowrap justify-center gap-8">
 				{cardList.map((card, index) => (
 					<FeaturesCard key={index} {...card} />
 				))}
 			</div>
-		</section>
+		</SectionContainer>
 	)
 }

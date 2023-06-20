@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CustomButton, CustomText, CustomLottiePlayer } from "@/components";
+import { CustomButton, CustomText, CustomLottiePlayer, SectionContainer } from "@/components";
 import heroLottie from "@/public/lottie-1.json";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 
@@ -8,14 +8,14 @@ TODO: Add responsiveness
 */
 function HeroSection() {
   return (
-    <section className="hero pt-44 pb-16  px-6 sm:px-14 md:px-20 lg:px-32 flex justify-between flex-col lg:flex-row gap-14">
+    <SectionContainer className="pt-44 pb-16 flex justify-between flex-col lg:flex-row gap-14">
       <div className="text-center md:text-left grid content-center ">
         {/*Heading*/}
         <h1 className="text-5xl md:text-6xl my-3 font-semibold">
           We’re here to Increase your Productivity
         </h1>
         {/*mark + text + button*/}
-        <div className="my-6 md:pr-26">
+        <div className="my-6 ">
           <Image
             src="/mark.svg"
             alt="just a mark"
@@ -43,7 +43,7 @@ function HeroSection() {
       <div className="w-full">
         <CustomLottiePlayer src={heroLottie} />
       </div>
-    </section>
+    </SectionContainer>
   );
 }
 

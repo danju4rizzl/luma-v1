@@ -55,7 +55,7 @@ export interface PricingCardProps {
   offers: {
     offer: string;
   }[];
-  isHot?: boolean
+  isPopularPlan?: boolean
 }
 
 

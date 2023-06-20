@@ -1,107 +1,105 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import { TogglerProps, TogglerType } from "@/types"
-import { PricingCard } from "@/components"
+import React, { useState } from "react";
+import { TogglerProps, TogglerType } from "@/types";
+import { PricingCard } from "@/components";
 
 const priceCardData = [
-	{
-		cardTitle: "free",
-		monthlyPrice: "0",
-		yearlyPrice: "0",
-		cardOffers: [
-			{ offer: "2 Users" },
-			{ offer: "2 GB Storage" },
-			{ offer: "Public Share & Comments" },
-			{ offer: "Chat Support" },
-			{ offer: "New income apps" }
-		]
-	},
-	{
-		cardTitle: "pro",
-		monthlyPrice: "15,000",
-		yearlyPrice: "140,000",
-		cardOffers: [
-			{ offer: "10 Users" },
-			{ offer: "10 GB Storage" },
-			{ offer: "Advanced Collaboration Features" },
-			{ offer: "Priority Email Support" },
-			{ offer: "Custom Branding" }
-		]
-	},
-	{
-		cardTitle: "business",
-		monthlyPrice: "25,000",
-		yearlyPrice: "329,000",
-		cardOffers: [
-			{ offer: "Unlimited Users" },
-			{ offer: "50 GB Storage" },
-			{ offer: "Advanced Collaboration Features" },
-			{ offer: "Priority Email & Phone Support" },
-			{ offer: "Custom Branding" }
-		]
-	}
-]
+  {
+    cardTitle: "free",
+    monthlyPrice: "0",
+    yearlyPrice: "0",
+    cardOffers: [
+      { offer: "2 Users" },
+      { offer: "2 GB Storage" },
+      { offer: "Public Share & Comments" },
+      { offer: "Chat Support" },
+      { offer: "New income apps" },
+    ],
+  },
+  {
+    cardTitle: "basic",
+    monthlyPrice: "1,500",
+    yearlyPrice: "5,700",
+    cardOffers: [
+      { offer: "10 Users" },
+      { offer: "10 GB Storage" },
+      { offer: "Advanced Collaboration Features" },
+      { offer: "Priority Email Support" },
+      { offer: "Custom Branding" },
+    ],
+  },
+  {
+    cardTitle: "pro",
+    monthlyPrice: "3,400",
+    yearlyPrice: "7,200",
+    cardOffers: [
+		{ offer: "Unlimited Users" },
+		{ offer: "Unlimited Storage" },
+		{ offer: "AI Collaboration Features" },
+		{ offer: "Instant Support" },
+		{ offer: "Free Training" },
+    ],
+  }
+];
 
 /**
 The PriceSwitch component is a toggle button that changes the price of the plan.
 */
 const PriceSwitch = ({ title, active, onClick }: TogglerProps) => {
-	return (
-		<button
-			type="button"
-			className={`px-8 py-3 rounded-md capitalize ${
-				active ? "bg-teal-400 text-white" : "bg-white text-teal-600"
-			}`}
-			onClick={onClick}
-		>
-			{title}
-		</button>
-	)
-}
+  return (
+    <button
+      type="button"
+      className={`px-8 py-3 rounded-md capitalize ${
+        active ? "bg-teal-400 text-white" : "bg-white text-teal-600"
+      }`}
+      onClick={onClick}
+    >
+      {title}
+    </button>
+  );
+};
 
 export default function Pricing() {
-	const monthly = "monthly"
-	const yearly = "yearly"
+  const MONTHLY = "monthly";
+  const YEARLY = "yearly";
 
-	const [activeSwitch, setActiveSwitch] = useState<TogglerType>(monthly)
+  const [activeSwitch, setActiveSwitch] = useState<TogglerType>(MONTHLY);
 
-	const handleSwitch = (monthOrYear: TogglerType) => {
-		if (activeSwitch !== monthOrYear) {
-			setActiveSwitch(monthOrYear)
-		}
-	}
+  const handleSwitch = (monthOrYear: TogglerType) => {
+    if (activeSwitch !== monthOrYear) {
+      setActiveSwitch(monthOrYear);
+    }
+  };
 
-	return (
-		<div className="pricing">
-			<div className="grid place-items-center mt-10 mb-16">
-				<div className="bg-white rounded-md p-2 shadow-lg">
-					<PriceSwitch
-						title={`Pay ${monthly}`}
-						active={activeSwitch === monthly}
-						onClick={() => handleSwitch(monthly)}
-					/>
-					<PriceSwitch
-						title={`Pay ${yearly}`}
-						active={activeSwitch === yearly}
-						onClick={() => handleSwitch(yearly)}
-					/>
-				</div>
-			</div>
+  return (
+    <div className="grid justify-center">
+      <div className="bg-white rounded-md p-2 shadow-lg mt-10 mb-16 mx-auto">
+        <PriceSwitch
+          title={`Pay ${MONTHLY}`}
+          active={activeSwitch === MONTHLY}
+          onClick={() => handleSwitch(MONTHLY)}
+        />
+        <PriceSwitch
+          title={`Pay ${YEARLY}`}
+          active={activeSwitch === YEARLY}
+          onClick={() => handleSwitch(YEARLY)}
+        />
+      </div>
 
-			<div className="flex justify-center gap-8 px-24">
-				{priceCardData.map(
-					({ cardTitle, monthlyPrice, yearlyPrice, cardOffers }, index) => (
-						<PricingCard
-							offers={cardOffers}
-							title={cardTitle}
-							price={activeSwitch === monthly ? monthlyPrice : yearlyPrice}
-							isHot={cardTitle === "pro"}
-							key={index}
-						/>
-					)
-				)}
-			</div>
-		</div>
-	)
+      <div className="grid lg:grid-cols-3 gap-8 ">
+        {priceCardData.map(
+          ({ cardTitle, monthlyPrice, yearlyPrice, cardOffers }, index) => (
+            <PricingCard
+              offers={cardOffers}
+              title={cardTitle}
+              price={activeSwitch === MONTHLY ? monthlyPrice : yearlyPrice}
+              isPopularPlan={cardTitle === "basic"}
+              key={index}
+            />
+          )
+        )}
+      </div>
+    </div>
+  );
 }

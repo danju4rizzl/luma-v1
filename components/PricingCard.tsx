@@ -5,16 +5,16 @@ export default function PricingCard({
 	price,
 	title,
 	offers,
-	isHot
+	isPopularPlan
 }: PricingCardProps) {
 	return (
 		<div
 			className={`pt-10 pb-5 px-5 rounded-2xl shadow-md ${
-				isHot ? "bg-teal-400 " : "bg-white"
+				isPopularPlan ? "bg-teal-400 " : "bg-white"
 			}`}
 		>
 			<div
-				className={`max-w-xs mb-10 text-center ${isHot ? "text-white" : ""}`}
+				className={`max-w-xs mb-10 text-center ${isPopularPlan ? "text-white" : ""}`}
 			>
 				<h5 className="capitalize text-3xl font-semibold">{title}</h5>
 				<CustomText text="Experiment the power of infinite possibilities" />
@@ -23,19 +23,19 @@ export default function PricingCard({
 					<span className="text-2xl -mt-4">₦</span>
 					{price}
 				</h3>
-				{isHot && (
+				{isPopularPlan && (
 					<small className="bg-teal-600 text-white font-semibold  px-3 py-2 rounded-lg">
 						Save ₦{Math.floor(parseFloat(price) / 0.5)}00 instantly!
 					</small>
 				)}
 			</div>
-			<ul className={` p-5 rounded-2xl  ${isHot ? "bg-white" : "bg-teal-50"}`}>
+			<ul className={` p-5 rounded-2xl  ${isPopularPlan ? "bg-white" : "bg-teal-50"}`}>
 				{offers.map(({ offer }, index) => (
 					<CustomListItem title={offer} key={index} isSmall />
 				))}
 
 				<div className="grid">
-					<Button title={`Start ${title} plan`} active={isHot} />
+					<Button title={`Get ${title} plan`} active={isPopularPlan} />
 				</div>
 			</ul>
 		</div>
