@@ -74,7 +74,7 @@ export default function Pricing() {
 
   return (
     <div className="grid justify-center">
-      <div className="bg-white rounded-md p-2 shadow-lg mt-10 mb-16 mx-auto">
+      <div className="bg-white rounded-md shadow-lg p-2 mt-10 mb-16 mx-auto">
         <PriceSwitch
           title={`Pay ${MONTHLY}`}
           active={activeSwitch === MONTHLY}
@@ -87,7 +87,7 @@ export default function Pricing() {
         />
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8 ">
+      <div className="grid lg:grid-cols-3 gap-8">
         {priceCardData.map(
           ({ cardTitle, monthlyPrice, yearlyPrice, cardOffers }, index) => (
             <PricingCard

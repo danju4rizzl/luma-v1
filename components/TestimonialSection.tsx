@@ -1,11 +1,10 @@
-"use client"
-
 import Image from "next/image"
 import {
 	SectionTitle,
 	CustomText,
 	CustomLottiePlayer,
-	ContactForm
+	ContactForm,
+	SectionContainer
 } from "@/components"
 import quoteImg from "@/public/quote.svg"
 import formLottie from "@/public/lottie-3.json"
@@ -21,8 +20,9 @@ const TestimonialsData = [
 
 export default function TestimonialSection() {
 	return (
-		<section className="px-32 pt-32 pb-20 grid grid-cols-2 gap-8 bg-slate-800 ">
-			<div className="text-white pr-16">
+		<SectionContainer className="pt-32 pb-20 grid lg:flex justify-center gap-x-8 gap-y-20 bg-slate-800">
+
+			<div className="text-white xl:pr-16 text-center lg:text-left">
 				<SectionTitle title="What people are saying about us" />
 
 				<CustomText text="Everything you need to accept to payment and grow your money of manage anywhere on planet" />
@@ -32,6 +32,7 @@ export default function TestimonialSection() {
 						width={45}
 						height={38}
 						alt="testimonial quote"
+						className="hidden md:block"
 					/>
 					{TestimonialsData.map(({ comment, author, photo }, index) => (
 						<div key={index}>
@@ -51,13 +52,14 @@ export default function TestimonialSection() {
 				</div>
 			</div>
 
-			<div className="px-16 pb-16 bg-slate-700  rounded-2xl text-white before:block before:absolute before:inset-0 before:bg-teal-700 before:opacity-30 before:rounded-2xl before:z-[-1] before:p-16 before:w-96  relative">
-				<div className="w-1/2 text-center mx-auto -mt-24">
+			<div className="px-8 pb-8 sm:px-12 sm:pb-12 md:px-16 md:pb-16 bg-slate-700  rounded-2xl text-white">
+				<div className="w-3/4 xl:w-1/2 text-center mx-auto mb-14">
 					<CustomLottiePlayer src={formLottie} />
-					<h4 className="text-3xl ">Get Started</h4>
+					<h4 className="text-2xl -my-7">Get Started</h4>
 				</div>
 				<ContactForm />
 			</div>
-		</section>
+		
+		</SectionContainer>
 	)
 }

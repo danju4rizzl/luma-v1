@@ -35,7 +35,7 @@ export default function PricingCard({
 				))}
 
 				<div className="grid">
-					<Button title={`Get ${title} plan`} active={isPopularPlan} />
+					<Button title={`Get ${title}`} active={isPopularPlan} />
 				</div>
 			</ul>
 		</div>
