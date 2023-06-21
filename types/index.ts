@@ -64,9 +64,3 @@ export interface PricingCardProps {
   }[];
   isPopularPlan?: boolean
 }
-
-
-export interface AppStateContextType {
-  activeButton: TogglerType
-  setActiveButton: React.Dispatch<React.SetStateAction<TogglerType>>
-}
