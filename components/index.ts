@@ -15,7 +15,7 @@ import CustomListItem from "./CustomListItem"
 import Pricing from "./Pricing"
 import PricingCard from "./PricingCard"
 import ContactForm from "./ContactForm"
-import Navigation from "./Navigation"
+import NavigationLinks from "./Navigation"
 import NavigationItem from "./NavigationItem"
 import FeaturesCard from "./FeaturesCard"
 
@@ -32,7 +32,7 @@ import TestimonialSection from "./sections/TestimonialSection"
 
 export {
   SectionContainer,
-  Navigation,
+  NavigationLinks,
   NavigationItem,
   Header,
   Footer,

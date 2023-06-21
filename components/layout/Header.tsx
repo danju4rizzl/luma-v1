@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import Link from "next/link";
-import { Navigation, NavigationItem } from "@/components";
+import { NavigationLinks, NavigationItem } from "@/components";
 import { MdMenu, MdMenuOpen } from "react-icons/md";
 
 const ButtonLinks = [
@@ -32,7 +32,7 @@ export default function Header() {
             Luma
           </Link>
           <div className="hidden lg:flex">
-            <Navigation />
+            <NavigationLinks />
           </div>
         </div>
         <div className="hidden lg:flex justify-between items-center gap-3">
@@ -41,7 +41,7 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Mobile Navigation is here */}
+        {/* Mobile NavigationLinks is here */}
         <div
           className="lg:hidden p-3 text-teal-800 text-4xl bg-teal-50 rounded-full cursor-pointer"
           onClick={() => setOpen(!open)}
@@ -55,7 +55,7 @@ export default function Header() {
           open ? "block" : "hidden"
         } bg-white rounded-2xl mx-10 px-5 py-6 shadow-lg`}
       >
-        <Navigation />
+        <NavigationLinks />
         <div className="flex gap-x-5">
           {ButtonLinks.map(({ url, title, isPrimary }) => (
             <NavigationItem title={title} url={url} isPrimary={isPrimary} />

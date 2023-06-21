@@ -1,6 +1,10 @@
 import { NavigationItemsProps } from "@/types";
 import Link from "next/link";
 
+
+/*
+* This is the navigation links as a list item
+*/
 export default function NavigationItem({
   title,
   url,
@@ -10,7 +14,7 @@ export default function NavigationItem({
   return isLink ? (
     <Link
       href={url}
-      className="rounded-lg px-3 py-2 hover:bg-teal-50 hover:text-teal-600 transition-all duration-300 ease-in-out"
+      className="rounded-lg px-4 py-3 hover:bg-teal-50 hover:text-teal-900 transition-all duration-300 ease-in-out"
     >
       {title}
     </Link>
@@ -19,9 +23,9 @@ export default function NavigationItem({
       href={url}
       className={`${
         isPrimary
-          ? "bg-teal-400 text-white hover:bg-teal-600"
-          : "bg-teal-50 text-teal-600 hover:bg-teal-100"
-      } px-5 py-2 rounded-full  transition-all duration-300`}
+          ? "bg-teal-600 text-white hover:bg-teal-500"
+          : "bg-teal-50 text-teal-900 hover:bg-teal-100"
+      } px-5 py-3 rounded-full  transition-all duration-300`}
     >
       {title}
     </Link>

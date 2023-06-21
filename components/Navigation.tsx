@@ -8,7 +8,7 @@ const navigationItems = [
   { title: "Contact Us", url: "/" },
 ];
 
-export default function Navigation() {
+export default function NavigationLinks() {
   return (
     <nav className="text-slate-700 font-medium">
       <ul className=" grid lg:flex items-center gap-2 md:gap-2">
