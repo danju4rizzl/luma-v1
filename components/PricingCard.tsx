@@ -1,5 +1,5 @@
 import { PricingCardProps } from "@/types"
-import { CustomText, CustomListItem, Button } from "@/components"
+import { Text, IconListItem, Button } from "@/components"
 
 export default function PricingCard({
 	price,
@@ -17,7 +17,7 @@ export default function PricingCard({
 				className={`max-w-xs mb-10 text-center ${isPopularPlan ? "text-white" : ""}`}
 			>
 				<h5 className="capitalize text-3xl font-semibold">{title}</h5>
-				<CustomText text="Experiment the power of infinite possibilities" />
+				<Text text="Experiment the power of infinite possibilities" />
 
 				<h3 className="text-5xl font-bold mt-4 mb-8 grid grid-flow-col justify-center">
 					<span className="text-2xl -mt-4">₦</span>
@@ -31,7 +31,7 @@ export default function PricingCard({
 			</div>
 			<ul className={` p-5 rounded-2xl  ${isPopularPlan ? "bg-white" : "bg-teal-50"}`}>
 				{offers.map(({ offer }, index) => (
-					<CustomListItem title={offer} key={index} isSmall />
+					<IconListItem title={offer} key={index} isSmall />
 				))}
 
 				<div className="grid">

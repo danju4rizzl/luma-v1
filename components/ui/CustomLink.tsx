@@ -1,16 +1,16 @@
-import { NavigationItemsProps } from "@/types";
+import { CustomLinksProps } from "@/types";
 import Link from "next/link";
 
 
 /*
 * This is the navigation links as a list item
 */
-export default function NavigationItem({
+export default function CustomLink({
   title,
   url,
   isPrimary,
   isLink,
-}: NavigationItemsProps) {
+}: CustomLinksProps) {
   return isLink ? (
     <Link
       href={url}

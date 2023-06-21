@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { CustomButton, CustomText, CustomLottiePlayer, SectionContainer } from "@/components";
+import { CustomButton, Text, CustomLottiePlayer, Container } from "@/components";
 import heroLottie from "@/public/lottie-1.json";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 
 function HeroSection() {
   return (
-    <SectionContainer className="pt-44 pb-16 flex justify-between flex-col lg:flex-row gap-14">
+    <Container className="pt-44 pb-16 flex justify-between flex-col lg:flex-row gap-14">
       <div className="text-center md:text-left grid content-center ">
         {/*Heading*/}
         <h1 className="text-5xl md:text-6xl my-3 font-semibold">
@@ -21,7 +21,7 @@ function HeroSection() {
             className="w-full"
           />
           <div className="my-5">
-            <CustomText
+            <Text
               text="Let's make your work more organize and easily using the app 
 						Dashboard with many of the latest features you need to succeed managing work daily."
             />
@@ -40,7 +40,7 @@ function HeroSection() {
       <div className="w-full">
         <CustomLottiePlayer src={heroLottie} />
       </div>
-    </SectionContainer>
+    </Container>
   );
 }
 

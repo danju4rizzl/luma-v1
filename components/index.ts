@@ -1,22 +1,23 @@
 import Header from './layout/Header'
 import Footer from './layout/Footer'
-import SectionContainer from "./layout/SectionContainer"
+import Container from "./layout/Container"
 
 // Ui imports
 import CustomButton from "./ui/CustomButton"
 import Button from "./ui/Button"
-import CustomText from "./ui/CustomText"
+import Text from "./ui/Text"
 import SectionTitle from "./ui/SectionTitle"
+import CustomLink from "./ui/CustomLink"
+import IconListItem from "./ui/IconListItem"
+
 
 // Other Components
-import CustomLottiePlayer from "./CustomLottiePlayer"
+import CustomLottiePlayer from "./ui/CustomLottiePlayer"
 import Rating from "./Rating"
-import CustomListItem from "./CustomListItem"
 import Pricing from "./Pricing"
 import PricingCard from "./PricingCard"
 import ContactForm from "./ContactForm"
 import NavigationLinks from "./Navigation"
-import NavigationItem from "./NavigationItem"
 import FeaturesCard from "./FeaturesCard"
 
 
@@ -31,19 +32,19 @@ import PricingSection from "./sections/PricingSection"
 import TestimonialSection from "./sections/TestimonialSection"
 
 export {
-  SectionContainer,
+  Container,
   NavigationLinks,
-  NavigationItem,
+  CustomLink,
   Header,
   Footer,
   HeroSection,
   CustomButton,
   Button,
-  CustomText,
+  Text,
   SectionTitle,
   CustomLottiePlayer,
   Rating,
-  CustomListItem,
+  IconListItem,
   Pricing,
   PricingCard,
   ContactForm,

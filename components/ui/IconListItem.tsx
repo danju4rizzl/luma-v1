@@ -1,10 +1,10 @@
-import { CustomListItemProps } from "@/types"
+import { IconListItemProps } from "@/types"
 import { BsCheck } from "react-icons/bs"
 
-export default function CustomListItem({
+export default function IconListItem({
 	title,
 	isSmall
-}: CustomListItemProps) {
+}: IconListItemProps) {
 	// size is just a variable that determines the size of the icon.
 	const size = !isSmall ? "8" : "6"
 

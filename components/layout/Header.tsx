@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import Link from "next/link";
-import { NavigationLinks, NavigationItem } from "@/components";
+import { NavigationLinks, CustomLink } from "@/components";
 import { MdMenu, MdMenuOpen } from "react-icons/md";
 
 const ButtonLinks = [
@@ -37,7 +37,7 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex justify-between items-center gap-3">
           {ButtonLinks.map(({ url, title, isPrimary }) => (
-            <NavigationItem title={title} url={url} isPrimary={isPrimary} />
+            <CustomLink title={title} url={url} isPrimary={isPrimary} />
           ))}
         </div>
 
@@ -58,7 +58,7 @@ export default function Header() {
         <NavigationLinks />
         <div className="flex gap-x-5">
           {ButtonLinks.map(({ url, title, isPrimary }) => (
-            <NavigationItem title={title} url={url} isPrimary={isPrimary} />
+            <CustomLink title={title} url={url} isPrimary={isPrimary} />
           ))}
         </div>
       </div>

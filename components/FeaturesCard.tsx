@@ -1,6 +1,6 @@
 import { FeaturesCardProps } from "@/types";
 import Image from "next/image";
-import CustomText from "./ui/CustomText";
+import Text from "./ui/Text";
 
 
 export default  function FeaturesCard  ({ image, title, body }: FeaturesCardProps) {
@@ -17,7 +17,7 @@ export default  function FeaturesCard  ({ image, title, body }: FeaturesCardProp
 			</div>
 			<div className="max-w-sm pr-2 text-center md:text-left">
 				<h4 className="text-2xl font-bold mt-4 mb-2">{title}</h4>
-				<CustomText text={body} />
+				<Text text={body} />
 			</div>
 		</div>
 	)

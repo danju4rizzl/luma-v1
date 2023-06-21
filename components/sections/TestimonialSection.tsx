@@ -1,10 +1,10 @@
 import Image from "next/image"
 import {
 	SectionTitle,
-	CustomText,
+	Text,
 	CustomLottiePlayer,
 	ContactForm,
-	SectionContainer
+	Container
 } from "@/components"
 import quoteImg from "@/public/quote.svg"
 import formLottie from "@/public/lottie-3.json"
@@ -20,12 +20,12 @@ const TestimonialsData = [
 
 export default function TestimonialSection() {
 	return (
-		<SectionContainer className="pt-32 pb-20 grid lg:flex justify-center gap-x-8 gap-y-20 bg-slate-800">
+		<Container className="pt-32 pb-20 grid lg:flex justify-center gap-x-8 gap-y-20 bg-slate-800">
 
 			<div className="text-white xl:pr-16 text-center lg:text-left">
 				<SectionTitle title="What people are saying about us" />
 
-				<CustomText text="Everything you need to accept to payment and grow your money of manage anywhere on planet" />
+				<Text text="Everything you need to accept to payment and grow your money of manage anywhere on planet" />
 				<div className="grid gap-5 mt-5">
 					<Image
 						src={quoteImg}
@@ -37,8 +37,8 @@ export default function TestimonialSection() {
 					{TestimonialsData.map(({ comment, author, photo }, index) => (
 						<div key={index}>
 							<div className="space-y-6 text-slate-300">
-								<CustomText text={comment} />
-								<CustomText text={author} />
+								<Text text={comment} />
+								<Text text={author} />
 								<Image
 									src={photo}
 									width={60}
@@ -60,6 +60,6 @@ export default function TestimonialSection() {
 				<ContactForm />
 			</div>
 		
-		</SectionContainer>
+		</Container>
 	)
 }

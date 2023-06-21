@@ -2,11 +2,15 @@
 
 import React, { ReactNode } from "react";
 
-export interface NavigationItemsProps {
+export interface CustomLinksProps {
   title: string;
   url: string;
   isPrimary?: boolean;
   isLink?: boolean;
+}
+
+export interface TextProps {
+  text: string;
 }
 
 export interface ButtonProps {
@@ -28,10 +32,6 @@ export interface SectionTitleProps {
   title: string;
 }
 
-export interface CustomTextProps {
-  text: string;
-}
-
 export interface RatingProps {
   ratedBy: string;
   rating: number;
@@ -49,9 +49,9 @@ export interface TogglerProps {
   onClick: () => void;
 }
 
-export type TogglerType = "monthly" | "yearly"
+export type TogglerType = "monthly" | "yearly";
 
-export interface CustomListItemProps {
+export interface IconListItemProps {
   title: string;
   isSmall?: boolean;
 }
@@ -62,5 +62,5 @@ export interface PricingCardProps {
   offers: {
     offer: string;
   }[];
-  isPopularPlan?: boolean
+  isPopularPlan?: boolean;
 }
