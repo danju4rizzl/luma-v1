@@ -1,6 +1,7 @@
-import Header from './Header'
-import Footer from './Footer'
-import HeroSection from "./HeroSection"
+import Header from './layout/Header'
+import Footer from './layout/Footer'
+import SectionContainer from "./layout/SectionContainer"
+
 // Ui imports
 import CustomButton from "./ui/CustomButton"
 import Button from "./ui/Button"
@@ -15,20 +16,24 @@ import Pricing from "./Pricing"
 import PricingCard from "./PricingCard"
 import ContactForm from "./ContactForm"
 import Navigation from "./Navigation"
-import SectionContainer from "./SectionContainer"
+import NavigationItem from "./NavigationItem"
+import FeaturesCard from "./FeaturesCard"
+
 
 
 // See section imports here  
-import CollabSection from "./CollabSection"
-import SupportSection from "./SupportSection"
-import FeaturesSection from "./FeaturesSection"
-import BenefitsSection from "./BenefitsSection"
-import PricingSection from "./PricingSection"
-import TestimonialSection from "./TestimonialSection"
+import HeroSection from "./sections/HeroSection"
+import CollabSection from "./sections/CollabSection"
+import SupportSection from "./sections/SupportSection"
+import FeaturesSection from "./sections/FeaturesSection"
+import BenefitsSection from "./sections/BenefitsSection"
+import PricingSection from "./sections/PricingSection"
+import TestimonialSection from "./sections/TestimonialSection"
 
 export {
   SectionContainer,
   Navigation,
+  NavigationItem,
   Header,
   Footer,
   HeroSection,
@@ -45,6 +50,7 @@ export {
   CollabSection,
   SupportSection,
   FeaturesSection,
+  FeaturesCard,
   BenefitsSection,
   PricingSection,
   TestimonialSection

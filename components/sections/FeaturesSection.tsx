@@ -1,6 +1,5 @@
-import { SectionContainer, CustomText, SectionTitle, CustomButton,} from "@/components"
-import { FeaturesCardProps } from "@/types"
-import Image from "next/image"
+import { SectionContainer, CustomText, SectionTitle, CustomButton,FeaturesCard} from "@/components"
+
 
 const cardList = [
 	{
@@ -19,26 +18,6 @@ const cardList = [
 		body: "We always provide useful information to make it easier for you every day"
 	}
 ]
-
-const FeaturesCard = ({ image, title, body }: FeaturesCardProps) => {
-	return (
-		<div className="grid">
-			<div className="">
-				<Image
-					src={image}
-					width={364}
-					height={430}
-					alt={`Card image of ${title}`}
-					
-				/>
-			</div>
-			<div className="max-w-sm pr-2 text-center md:text-left">
-				<h4 className="text-2xl font-bold mt-4 mb-2">{title}</h4>
-				<CustomText text={body} />
-			</div>
-		</div>
-	)
-}
 
 export default function FeaturesSection() {
 	return (

@@ -3,9 +3,6 @@ import { CustomButton, CustomText, CustomLottiePlayer, SectionContainer } from "
 import heroLottie from "@/public/lottie-1.json";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 
-/**
-TODO: Add responsiveness 
-*/
 function HeroSection() {
   return (
     <SectionContainer className="pt-44 pb-16 flex justify-between flex-col lg:flex-row gap-14">
@@ -15,7 +12,7 @@ function HeroSection() {
           We’re here to Increase your Productivity
         </h1>
         {/*mark + text + button*/}
-        <div className="my-6 ">
+        <div className="my-6  pl-8 pr-8 md:pl-0 md:pr-28 lg:pr-24">
           <Image
             src="/mark.svg"
             alt="just a mark"

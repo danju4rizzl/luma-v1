@@ -34,13 +34,13 @@ const priceCardData = [
     monthlyPrice: "3,400",
     yearlyPrice: "7,200",
     cardOffers: [
-		{ offer: "Unlimited Users" },
-		{ offer: "Unlimited Storage" },
-		{ offer: "AI Collaboration Features" },
-		{ offer: "Instant Support" },
-		{ offer: "Free Training" },
+      { offer: "Unlimited Users" },
+      { offer: "Unlimited Storage" },
+      { offer: "AI Collaboration Features" },
+      { offer: "Instant Support" },
+      { offer: "Free Training" },
     ],
-  }
+  },
 ];
 
 /**
@@ -50,7 +50,7 @@ const PriceSwitch = ({ title, active, onClick }: TogglerProps) => {
   return (
     <button
       type="button"
-      className={`px-8 py-3 rounded-md capitalize ${
+      className={`px-5 md:px-8 py-3 rounded-md capitalize ${
         active ? "bg-teal-400 text-white" : "bg-white text-teal-600"
       }`}
       onClick={onClick}
@@ -74,7 +74,7 @@ export default function Pricing() {
 
   return (
     <div className="grid justify-center">
-      <div className="bg-white rounded-md shadow-lg p-2 mt-10 mb-16 mx-auto">
+      <div className="bg-white rounded-md shadow-lg p-2 mt-10 mb-16 mx-auto ">
         <PriceSwitch
           title={`Pay ${MONTHLY}`}
           active={activeSwitch === MONTHLY}
@@ -94,7 +94,7 @@ export default function Pricing() {
               offers={cardOffers}
               title={cardTitle}
               price={activeSwitch === MONTHLY ? monthlyPrice : yearlyPrice}
-              isPopularPlan={cardTitle === "basic"}
+              isPopularPlan={cardTitle === priceCardData[1].cardTitle}
               key={index}
             />
           )

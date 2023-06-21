@@ -2,6 +2,13 @@
 
 import React, { ReactNode } from "react";
 
+export interface NavigationItemsProps {
+  title: string;
+  url: string;
+  isPrimary?: boolean;
+  isLink?: boolean;
+}
+
 export interface ButtonProps {
   title: string;
   active?: boolean;
